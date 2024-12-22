@@ -1,0 +1,22 @@
+## About views
+
+Views are the files which are used to show each page, the views included on this example are:
+    contacts
+    jobs
+    welcome
+    job
+
+in each file you may see reference to some variables which you may wonder where have they been declared
+and the answer is they have been passed from the controller (actually they are being passed on the function used in the Route)
+
+As an example if you check the jobs.blade.php file there is the $jobs variable which has been passed from routes like this:
+Route::get('/jobs', function () {
+    $jobs = Job::all();
+    return view('jobs', ['jobs' => $jobs]);
+});
+
+you may notice there is this function Job::all()
+this is from a model called Job with an static function all() go to the app/Models directory to see more details
+
+Go to app/Models to see the Models example, specially Job which was the one made from scratch
+Go to resource/views/components/README for an explanation about components

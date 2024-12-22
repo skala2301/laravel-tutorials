@@ -64,3 +64,42 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+## About this Project
+
+On the following project you may get guidance for the basics of laravel:
+    Ensure a basic .env file is setup in your main folder
+    Set up a proper database in your .env file
+    use php artisan migrate so the database is initialized for your project
+    check for important sections of this project:
+        routes
+        resources/views/
+        resources/views/components
+        app/Models
+
+This project example was an excercice for routing, views management, components creation and Model introduction
+
+in the routes you will see all the routes which are used specified in the web.php file
+as an example:
+Route::get('/job/{id}', function ($id) {
+
+    $job = Job::find($id);
+
+    return view('job', [
+        'job' => $job,
+    ]);
+});
+
+this route redirects to the view 'job', as you can see this method Route::get(), checks for the route which includes an id
+'/job/{id}' then in the function you pass the id as $id which is used inside.
+
+the job view is the file in resources/views/ with the name job.blade.php
+
+Go to resource/views/README for an explanation about views
+Go to routes/ for some routing examples.
+Go to app/Models to see the Models example, specially Job which was the one made from scratch
+
+

@@ -82,3 +82,6 @@ important commands to have in mind:
     php artisan make:model ModelName
     php artisan make:migration migration_name
     php artisan make:factory ModelFactoryName
+
+
+On this project lazy loading has been disabled, if you want to activate it go to AppServiceProvider

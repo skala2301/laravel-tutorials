@@ -11,6 +11,7 @@ class Employer extends Model
     use HasFactory;
     
     public function jobs() {
+        //To prevent colision here we explicitly refere to job_listing_id as the column
         return $this->hasMany(Job::class, 'job_listing_id');
     }
 }

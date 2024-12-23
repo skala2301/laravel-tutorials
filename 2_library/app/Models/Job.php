@@ -22,6 +22,9 @@ class Job extends Model{
     }
 
     public function tags() {
+        //to prevent colision with predefined table jobs we specify the foreignPivotKey: 'job_listing_id'
+        //in this case we use foreignPivotKey because we are refering to the key which represents jobs listing
+        //which is this model table in the pivot table job_tag check the related migration for reference
         return $this->belongsToMany(Tag::class, foreignPivotKey: 'job_listing_id');
     }
     

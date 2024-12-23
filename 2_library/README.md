@@ -64,3 +64,21 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## About this project
+
+This is part of a laravel tutorial and covers the following topics
+
+    migrations -> check route = database/migrations for examples
+    factories -> check route = database/factories for examples and check the README
+    models -> check route = app/Models/ check the README
+    Table Colisions -> check routes = [database/migrations, app/Models/Job.php] for examples and check the README
+
+important commands to have in mind:
+
+    php artisan tinker -> tinker is like a playground, you may test laravel code here, 
+    php artisan help [command] command can be migrate, make, make:migration, etc, it provides help for any artisan command
+    php artisan make:model ModelName
+    php artisan make:migration migration_name
+    php artisan make:factory ModelFactoryName

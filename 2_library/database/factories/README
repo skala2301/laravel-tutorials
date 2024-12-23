@@ -1,0 +1,16 @@
+## About Factories
+
+Laravel allows you to define a set of default attributes for each of your Eloquent models using model factories
+
+
+example of use in tinker
+
+App\Models\Tag::factory()->withJobs()->create();
+withJobs is a customiced method
+
+App\Models\Job::factory(10)->create();
+the last command will create 10 records
+check the factory models for specific examples
+
+notice the fake() function used in the factory this can generate data depending on the method, for example:
+fake()->jobTitle() will generate a job title choosen by laravel itself

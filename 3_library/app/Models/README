@@ -1,0 +1,11 @@
+## About Models
+
+The most important here is to check the relationships between 
+Tag - Job
+Job - Employer
+
+notice that to prevent colision explicit reference is specified for job_listing_id
+
+Check the migrations to verify how the related tables are created
+
+something important to notice is that for Tag - Job relationship a pivot table was created

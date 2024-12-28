@@ -1,0 +1,21 @@
+## About Components
+
+Components in blade are created as a file into components directory
+this file has the componetname.blade.php
+they have the following structure:
+<x-componetname>
+    <x-slot name='variable_name'>
+        variable_value
+    </xslot>
+    slot
+</x-componetname>
+
+by default they include the variable $slot which is the child of the component
+
+the <x-slot> can be used as a variable inside the component
+
+a component includes some attributes which can be accessed as {{$attributes}} or you can get specific attributes like this:
+$attributes->get('attrubute_name') 
+
+To see an example check the nav-link.blade.php file
+you can also add data as props for which you can see an example in nav-link.blade.php file

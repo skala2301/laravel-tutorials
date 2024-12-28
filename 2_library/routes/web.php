@@ -13,7 +13,8 @@ Route::get('/jobs', function () {
     //every time you ask for data related to employer from job, to experiment with lazy loading uncomment the line below
     //note that lazy loading is disable for now, enable it on AppServiceProvider
     //$jobs = Job::all(); 
-    $jobs = Job::with('employer')->get(); 
+    //$jobs = Job::with('employer')->get();
+    $jobs = Job::with('employer')->paginate(5); 
     return view('jobs', ['jobs' => $jobs]);
 });
 

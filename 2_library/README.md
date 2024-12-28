@@ -74,6 +74,7 @@ This is part of a laravel tutorial and covers the following topics
     factories -> check route = database/factories for examples and check the README
     models -> check route = app/Models/ check the README
     Table Colisions -> check routes = [database/migrations, app/Models/Job.php] for examples and check the README
+    seeders -> check route = database/seeders for examples about seeders use
 
 important commands to have in mind:
 
@@ -82,6 +83,8 @@ important commands to have in mind:
     php artisan make:model ModelName
     php artisan make:migration migration_name
     php artisan make:factory ModelFactoryName
+    php artisan db:seed
+    php artisan migrate:fresh --seed
 
 
 On this project lazy loading has been disabled, if you want to activate it go to AppServiceProvider
